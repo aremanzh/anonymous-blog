@@ -1,0 +1,40 @@
+<%- include("partials/newHeader") -%> 
+
+<div class="banner">
+    <div class="container">
+        <h1 class="banner-title"><span>Anonymous.</span> Blog</h1>
+        <p>write anything meaningful or just for fun without revealing your identity!</p>
+        <button><a href="profile">Write Now</a></button>
+    </div>
+</div>
+
+<section class="design" id="design">
+    <div class="container">
+        <div class="title">
+            <h2>Recent Stories</h2>
+            <p>recent sharing by our communities</p>
+        </div>
+
+        <div class="design-content row mb-3">
+            <!-- item -->
+            <%ejsPost.forEach(function(post){%> 
+            <div class="design-item col-12 col-md-6 col-lg-4">
+                <div class="design-img">
+                    <img src="/images/post.jpg" alt="">
+                    <span><i class="fa fa-heart"></i> 14</span>
+                    <span><%=post.postDate%></span>
+                </div>
+                <div class="design-title">
+                    <h3><a href=<%="/post/" + post.newUrl%>><%=post.newTitle%></a></h3><hr>
+                    <p class="card-text"><%=post.newContent%></p><hr>
+                    <button class="button"><a href=<%="/post/" + post.newUrl%>>Read More</a></button>
+                </div>
+            </div>
+            <%})%>
+            <!--end of item-->
+        </div>
+    </div>
+</section>
+<!-- end of design -->
+
+<%- include("partials/newFooter") -%> 

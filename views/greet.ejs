@@ -1,0 +1,23 @@
+<%- include("partials/newHeader") -%> 
+
+<div class="banner">
+    <div class="container">
+        <h1 class="banner-title"><span>Anonymous.</span> Blog</h1>
+        <p>write anything meaningful or just for fun without revealing your identity!</p>
+        <button><a href="profile">Write Now</a></button>
+    </div>
+</div>
+
+<h1>Home</h1>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title"><%=greetTitle%></h3>
+        <em><%=greetDate%></em><br><br>
+        <p class="card-text"><%=greetContent%></p>
+        <br>
+        <a href=<%="/hello/" + greetUrl%> class="btn btn-primary">Read More</a>
+        <hr>
+    </div>
+</div>
+
+<%- include("partials/newFooter") -%> 

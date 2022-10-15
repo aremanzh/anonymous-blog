@@ -1,0 +1,17 @@
+<%- include("partials/newHeader") -%> 
+
+<h1>Home</h1>
+<div class="card">
+    <div class="card-body">
+        <%ejsPost.forEach(function(post){%> 
+            <h3 class="card-title"><a href=<%="/post/" + post.newUrl%>><%=post.newTitle%></a></h3>
+            <em><%=post.postDate%></em><br><br>
+            <p class="card-text"><%=post.newContent%></p>
+            <br>
+            <a href=<%="/post/" + post.newUrl%> class="btn btn-primary">Read More</a>
+            <hr>
+        <%})%>
+    </div>
+</div>
+
+<%- include("partials/newFooter") -%> 

@@ -1,0 +1,42 @@
+<%- include("partials/newHeader") -%> 
+
+<div class="banner login">
+  <div class="container">
+      <h1 class="banner-title"><span>Login</span></h1>
+      <form name="loginBlog" action="/login" method="post">
+        <div class="form-group" style="text-align: left; width: 500px; margin: auto">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="username" placeholder="abc@gmail.com" required>
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="*******" required>
+        </div><hr>
+        <button class="btn btn-primary" type="submit">Login now</button>
+      </form>
+  </div>
+
+  <div class="social-login">
+    <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a href="/auth/google" class="btn btn-block" role="button">
+            <i class="fab fa-google"></i>
+            Log In with Google
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a href="#" class="btn btn-block" role="button">
+            <i class="fab fa-facebook"></i>
+            Log In with Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include("partials/newFooter") -%> 

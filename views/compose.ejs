@@ -1,0 +1,33 @@
+<%- include("partials/newHeader") -%> 
+
+<section class="post-banner compose" id="post-banner">
+  <div class="content">
+    <h3>Share your exciting story!</h3>
+    <p>
+      Write now
+    </p>
+  </div>
+</section>
+
+<section class="posts-container" id="posts-container">
+  <div class="post-container">
+    <div class="post">
+      <form name="blogPost" action="/compose" method="post">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Post Title</label>
+          <input type="text" class="form-control" name="title" placeholder="Sunway Lagoon Trip" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Post Content</label>
+          <textarea class="form-control" name="content" rows="10" placeholder="Tell us about your trip" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Publish</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="sidebar">
+  </div>
+</section>
+
+<%- include("partials/newFooter") -%> 

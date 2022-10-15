@@ -1,0 +1,44 @@
+<%- include("partials/newHeader") -%>
+
+<section class="post-banner" id="post-banner">
+  <div class="content">
+    <h3>Explore users post</h3>
+    <p>Simple User interface. Many more to be update! </p>
+  </div>
+</section>
+
+<section class="posts-container" id="posts-container">
+  <div class="post-container">
+    <div class="post">
+      <img src="../images/header.jpg" alt="" class="image" />
+      <div class="date">
+        <i class="far fa-clock"></i>
+        <span> <%=date%> </span>
+        <h3 class="title"> <%=title%> </h3>
+        <p class="text"> <%=content%> </p>
+        <div class="links">
+          <a href="#" class="likes">
+            <i class="far fa-heart"></i>
+            <span>likes</span>
+          </a>
+          <a href="#" class="icon">
+            <i class="far fa-comment"></i>
+            <span>(14)</span>
+          </a>
+          <a href="#" class="icon">
+            <i class="far fa-share-square"></i>
+            <span>(45)</span>
+          </a>
+          <form action="/delete" method="post">
+            <button class="btn btn-danger" type="submit" name="delete" value=<%=id %>>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+  </div>
+</section>
+
+<%- include("partials/newFooter") -%>

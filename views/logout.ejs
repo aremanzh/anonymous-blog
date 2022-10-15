@@ -1,0 +1,16 @@
+<%- include("partials/newHeader") -%> 
+
+<div class="banner">
+    <div class="container">
+        <h1 class="banner-title"><span>Logging out.....</span></h1>
+        <p>You have successfully logout.</p>
+    </div>
+</div>
+
+<script>
+    var timer = setTimeout(function() {
+        window.location='http://localhost:3000/'
+    }, 3000);
+</script>
+
+<%- include("partials/newFooter") -%> 
