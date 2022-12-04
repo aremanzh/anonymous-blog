@@ -6,6 +6,7 @@ const ejs = require("ejs");
 const db = require("./models/db");
 const passport = require("passport");
 const session = require("express-session");
+const Swal = require('sweetalert2')
 
 const home = require("./routes/index");
 const compose = require("./routes/compose");
@@ -49,6 +50,6 @@ app.use("/", profile);
 app.use("/", logout);
 app.use("/", auth);
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server started on port 3000");
+app.listen(process.env.PORT, function () {
+  console.log("Server started");
 });

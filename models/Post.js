@@ -18,6 +18,7 @@ module.exports = postSchema = mongoose.Schema({
     required: true,
   },
   newUrl: String,
+  imageUrl: String,
   postDate: Object,
 });
 

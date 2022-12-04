@@ -30,6 +30,7 @@ exports.get = (req, res) => {
         greetContent: greet.content,
         greetUrl: greet.url,
         greetDate: greet.postDate,
+        session: req.isAuthenticated(),
       });
       /* Post.insertMany(defaultPost, function (err) {
         if (err) {

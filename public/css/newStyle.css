@@ -105,7 +105,7 @@ header ul li a:hover {
 .social-login {
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 100%;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -353,9 +353,10 @@ section {
 
 .posts-container .post-container .post .text {
     color: #6b6b6b;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     padding: 1rem 0;
+    white-space: pre-line;
 }
 
 .posts-container .post-container .links {
@@ -393,10 +394,34 @@ section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/compose.jpg) center/cover no-repeat fixed;
 }
 
-@media (max-width: 991px) {
-    html {
-        font-size: 75%;
+@media (max-width: 425px) {
+    .about .container p {
+        width: 100%;
+        text-align: center;
     }
+    .contact .container {
+        width: 400px;
+        margin-top: 100px;
+    }
+    .social-login {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width:768px) {
+    .login .container {
+        max-width: 525px; 
+    }
+    .social-login {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 991px) {
+
     header {
         padding: 20px;
     }
@@ -447,10 +472,59 @@ section {
     section {
         padding: 2rem;
     }
+    .contact .container {
+        width: 600px;
+    }
 }
 
-@media (max-width: 450px) {
-    html {
-        font-size: 55%;
+@media (min-width: 1024px) {
+    .login .container {
+        max-width: 700px;
+    }
+    .social-login {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1440px) {
+    .login .container {
+        max-width: 980px;
+    }
+}
+@media (min-width: 2560px) {
+    header .logo {
+        width: 150px;
+        max-width: 150px;
+    }
+    header ul li {
+        font-size: 1.6rem;
+    }
+    .banner-title {
+        font-size: 8.5rem;
+    }
+    .banner p {
+        font-size: 2.2rem;
+        word-spacing: 5px;
+    }
+    .title h2 {
+        font-size: 3.4rem;
+    }
+    .title p {
+        font-size: 1.4rem;
+    }
+    footer span {
+        font-size: 1.4rem;
+    }
+    .design .container {
+        max-width: 1730px;
+    }
+    .design-title h3 {
+        font-size: 2.4rem;
+    }
+    .design-title {
+        font-size: 1.6rem;
+    }
+    .design-img span:last-of-type {
+        font-size: 1.6rem;
     }
 }

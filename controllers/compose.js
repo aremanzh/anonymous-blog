@@ -1,4 +1,5 @@
 const Post = require("../models/Post");
+const coolImages = require("cool-images");
 const date = require("../date");
 const _ = require("lodash");
 const { urlSlug } = require("../handlers/urlSlug");
@@ -21,6 +22,7 @@ exports.post = async (req, res) => {
     newContent: req.body.content,
     newUrl: urlSlug(req.body.title),
     postDate: date.getFullDate(),
+    imageUrl: coolImages.one(600, 800),
   });
 
   post.newTitle = _.upperFirst(post.newTitle);

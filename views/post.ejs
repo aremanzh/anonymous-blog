@@ -10,7 +10,7 @@
 <section class="posts-container" id="posts-container">
   <div class="post-container">
     <div class="post">
-      <img src="../images/header.jpg" alt="" class="image" />
+      <img src= <%=image%> alt="" class="image" />
       <div class="date">
         <i class="far fa-clock"></i>
         <span> <%=date%> </span>
@@ -29,9 +29,11 @@
             <i class="far fa-share-square"></i>
             <span>(45)</span>
           </a>
-          <form action="/delete" method="post">
-            <button class="btn btn-danger" type="submit" name="delete" value=<%=id %>>Delete</button>
-          </form>
+          <% if(session){ %>
+            <form action="/delete" method="post">
+              <button class="btn btn-danger" type="submit" name="delete" value=<%=id %>>Delete</button>
+            </form>
+          <% } %>
         </div>
       </div>
     </div>

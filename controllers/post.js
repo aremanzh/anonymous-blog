@@ -14,6 +14,7 @@ exports.get = (req, res) => {
           content: post.newContent,
           id: post._id,
           date: post.postDate,
+          image: post.imageUrl,
           session: req.isAuthenticated()
         });
       } else {

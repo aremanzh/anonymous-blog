@@ -3,7 +3,6 @@ const passport = require("passport");
 
 exports.get = (req, res) => {
   if (req.isAuthenticated()) {
-    console.log(req.user);
     res.render("profile", {session: req.isAuthenticated()});
   } else {
     res.render("login", {session: req.isAuthenticated()});
@@ -18,6 +17,7 @@ exports.post = (req, res) => {
 
   req.login(user, function (err) {
     if (err) {
+      res.send("You are not authorized!");
       console.log(err);
     } else {
       passport.authenticate("local")(req, res, function () {

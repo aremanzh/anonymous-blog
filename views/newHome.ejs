@@ -20,13 +20,13 @@
             <%ejsPost.forEach(function(post){%> 
             <div class="design-item col-12 col-md-6 col-lg-4">
                 <div class="design-img">
-                    <img src="/images/post.jpg" alt="">
+                    <img src=<%= post.imageUrl %>  alt=<%= post.imageUrl %>>
                     <span><i class="fa fa-heart"></i> 14</span>
                     <span><%=post.postDate%></span>
                 </div>
                 <div class="design-title">
-                    <h3><a href=<%="/post/" + post.newUrl%>><%=post.newTitle%></a></h3><hr>
-                    <p class="card-text"><%=post.newContent%></p><hr>
+                    <h3><a href=<%="/post/" + post.newUrl%>><%=post.newTitle.substring(0, 40) + "..."%></a></h3><hr>
+                    <p class="card-text"><%=post.newContent.substring(0, 100) + " ..."%></p><hr>
                     <button class="button"><a href=<%="/post/" + post.newUrl%>>Read More</a></button>
                 </div>
             </div>
