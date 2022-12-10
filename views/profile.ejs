@@ -1,13 +1,33 @@
-<%- include("partials/newHeader") -%> 
+<%- include("partials/newHeader") -%>
 
 <div class="banner profile">
-    <div class="container">
-        <h1 class="banner-title"><span>This is your </span>dashboard</h1>
-        <p>Simple profile dashboard. Many more to come!</p>
-        <button><a href="/compose">Start Writing</a></button>
-    </div>
+  <div class="container">
+    <h1 class="banner-title"><span>This is your </span>dashboard</h1>
+<hr>
+    <img src="<%= profilPic %> " alt="User profile image" width="32px" />
+<hr>
+    <form
+      name="profilePic"
+      id="profile-pic"
+      action="/profile"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div
+        class="form-group"
+        style="text-align: center; width: 100%; margin: auto"
+      >
+        <!-- <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" required> -->
+        <label for="image">User Image</label>
+        <input type="file" name="image" id="image" required accept="image/*" />
+      </div>
+      <hr />
+      <button class="btn btn-primary" type="submit">Save Profile</button>
+    </form>
+    <!-- <p>Simple profile dashboard. Many more to come!</p>
+        <button><a href="/compose">Start Writing</a></button> -->
+  </div>
 </div>
 
-<div>
-
-<%- include("partials/newFooter") -%> 
+<div><%- include("partials/newFooter") -%></div>

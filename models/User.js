@@ -8,6 +8,10 @@ const Post = require("./Post");
 const date = require("../date");
 
 const userSchema = new mongoose.Schema({
+  // name: {
+  //   type: String,
+  //   trim: true,
+  // },
   username: {
     type: String,
     trim: true,
@@ -26,6 +30,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: date.getFullDate(),
   },
+  userProfilePath: String,
 });
 
 userSchema.plugin(encrypt, {

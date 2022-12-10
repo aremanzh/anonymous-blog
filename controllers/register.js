@@ -7,7 +7,7 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   User.register(
-    { username: req.body.username },
+    { username: req.body.username, userProfilePath: "/images/user.png" },
     req.body.password,
     function (err, user) {
       if (err) {

@@ -88,7 +88,7 @@ header ul li a:hover {
 
 .banner {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/header.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/header.jpg) center/cover no-repeat fixed;
     flex: 1;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ header ul li a:hover {
 .login {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/header.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/header.jpg) center/cover no-repeat fixed;
 }
 
 .social-login {
@@ -268,7 +268,7 @@ footer {
 }
 
 .about {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/about.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/about.jpg) center/cover no-repeat fixed;
 }
 
 .about .container p {
@@ -278,13 +278,18 @@ footer {
 }
 
 .contact {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/contact.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/contact.jpg) center/cover no-repeat fixed;
 }
 .error {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/error.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/error.jpg) center/cover no-repeat fixed;
 }
 .profile {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8)), url(/images/profile.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 1)), url(/images/profile.jpg) center/cover no-repeat fixed;
+}
+
+.profile .container img {
+    width: 128px;
+    display: inline;
 }
 
 section {
