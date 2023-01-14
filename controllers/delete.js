@@ -13,6 +13,8 @@ exports.post = async (req, res) => {
     const postOwner = String(Owner);
     const selectedPostId = String(PostId);
 
+    console.log(Owner);
+
     if (postOwner === selectedPostId) {
       console.log("found owner!");
       Post.findByIdAndRemove(selectedPostId, function (err) {
